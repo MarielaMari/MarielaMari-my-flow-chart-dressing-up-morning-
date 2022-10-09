@@ -1,24 +1,32 @@
-const amIGoingOut = true;
-const isItRaining = true;
-const isItSnowing = true;
-const isItWarm = true;
+const dressingUpInMorining = (amIGoingOut, isItRaining, isItSnowing, isItWarm) => {
 
 if (amIGoingOut) {
     console.log('Am i going out?', amIGoingOut);
+    console.log('Check the weather.');
 
-    if (!isItRaining) {
-        console.log('Is it raining? Put raining set of clothes on', isItRaining);
+    if (isItRaining) {
+        console.log('Is it raining?', isItRaining);
+        console.log('Put raining set of clothes on and get out.');
     }
-        if (!isItSnowing) {
-            console.log('Is it snowing. Put snowing set of clothes on', isItSnowing);
+        if (isItSnowing) {
+            console.log('Is it snowing?', isItSnowing);
+            console.log('Put snowing set of clothes on and get out.')
         }
-            if (!isItWarm) {
-                console.log('Is it warm. Put warm set of clothes on', isItWarm);
-            } else {
-                console.log('Get the message? You have no appropriate clothes for this weather. You need to buy more clothes in future!!!');
+            if (isItWarm) {
+                console.log('Is it warm?', isItWarm);
+                console.log('Put clothes for warm weather on and get out.');
             }
-} 
-
-if (!amIGoingOut) {
-console.log('Do not change PJ');
+                
 }
+};
+
+console.log('\n');
+dressingUpInMorining(true, true, false, false);
+console.log('\n');
+dressingUpInMorining(true, false, true, false);
+console.log('\n');
+dressingUpInMorining(true, false, false, true);
+console.log('\n');
+dressingUpInMorining(false, false, false, false);
+
+
